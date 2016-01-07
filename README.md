@@ -1,4 +1,4 @@
-Spree Travel Hotel
+Spree Travel Cruise
 =========
 Spree Travel Hotel is intended to be a part of [Spree Travel](https://github.com/openjaf/spree_travel/), providing spree e-commerce platform with the essential functionalities to behave as a travel agency management platform. This means that this spree extension will add new models, behaviors, views, etc… to spree, and will modify some of the definition it holds.
 

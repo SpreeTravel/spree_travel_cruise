@@ -2,8 +2,8 @@
 module Spree
   Product.class_eval do
 
-    def hotel?
-      self.product_type == Spree::ProductType.find_by_name('hotel')
+    def cruise?
+      self.product_type == Spree::ProductType.find_by_name('cruise')
     end
 
   end
