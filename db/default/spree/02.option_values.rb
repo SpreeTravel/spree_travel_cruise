@@ -1,17 +1,13 @@
 ### These are the option types
-room = Spree::OptionType.find_by_name!("room")
-plan = Spree::OptionType.find_by_name!("plan")
+cabin_type = Spree::OptionType.find_by_name!("cabin_type")
 
 ### This is the data
 option_values = [
-  {:name => "room-standard", :presentation => "Standard", :option_type => room},
-  {:name => "room-suite", :presentation => "Suite", :option_type => room},
-  {:name => "room-junior-suite", :presentation => "Junior Suite", :option_type => room},
-  {:name => "room-master-suite", :presentation => "Master Suite", :option_type => room},
-  {:name => "plan-continental-breakfast", :presentation => "CP", :option_type => plan},
-  {:name => "plan-modified-american-plan", :presentation => "MAP", :option_type => plan},
-  {:name => "plan-american-plan", :presentation => "AP", :option_type => plan},
-  {:name => "plan-all-inclusive", :presentation => "AI", :option_type => plan}
+  {:name => "inside-cabin", :presentation => "Inside Cabin", :option_type => cabin_type},
+  {:name => "outside-cabin", :presentation => "Outside Cabin", :option_type => cabin_type},
+  {:name => "balcony-cabin", :presentation => "Balcony Cabin", :option_type => cabin_type},
+  {:name => "suite-cabin", :presentation => "Suite Cabin", :option_type => cabin_type},
+ 
 ]
 
 ### Creating Option Values
