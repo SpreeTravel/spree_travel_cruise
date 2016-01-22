@@ -33,16 +33,28 @@
           </div>
         </div>
       </div>
-      <% hashs = display_the_price(product)%>
-      <div class="price-section">
-        <span class="price"><small>PER/NIGHT:</small> <%=hashs.first[:price]%></span>
-      </div>
-      <div class="action-section">
-        <%= render :partial => 'spree/products/cart_form', :locals => { product: product, variant_id: product.variants.first.id, rate_id: hashs.first[:rate], mini: true} %>
-      </div>
-      <%#end%>
+       <% hash = display_the_price(product) %>     
+        
+      <% if !hash.empty? %>
+        <div class="price-section">
+          <span class="price"><small>PER/NIGHT:</small> <%=hash.first[:price]%></span>
+        </div>
+        <div class="action-section">
+          <%= render :partial => 'spree/products/product_type_cart_form', :locals => { product: product, variant_id: product.variants.first.id, rate_id: hash.first[:rate], mini: true} %>
+        </div>
+      <% else %>
+        <div class="price">
+          <span><%= t(:no_price) %> </span>
+        </div>
+      <% end %>
+        
+        
+        
+        
+
+ 
     </div>
-    <%# end %>
+ 
   </div>
 </li>
 

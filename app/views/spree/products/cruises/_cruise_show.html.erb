@@ -1,0 +1,40 @@
+<% @product.variants.each do |c| %>
+    <div class="col-sms-6 col-sm-6 col-md-6">
+      <article class="box cabin">
+        <div class="details">
+          <div class="row">
+            <div class="col-md-6">
+              <h4 class="box-title"><%= c.option_values.first.presentation %>
+              </h4>
+            </div>
+               <% hash = display_the_price(c) %>
+            <% if !hash.empty? %>
+              <div class="col-md-4 price"><%= t(:from) %>
+                <span>$<%= hash.first[:price] %></span>
+              </div>
+              <div class="action-section">
+                <%= render :partial => 'spree/products/product_type_cart_form', :locals => { product: product, variant_id: c.id, rate_id: hash.first[:rate], mini: true} %>
+              </div>
+            <% else %>
+              <div class="col-md-4 price">
+              <span><%= t(:no_price) %> </span>
+            </div>
+            <% end %>
+          </div>
+          <div class="row">
+            <div class="col-md-12 ">
+              <% if c.sku == 'inside-cabin' %>
+              <p>Economize in style, with a cozy and beautifully designed space to rest your head. Air-conditioned, mirrored inside cabins have two lower beds that can be converted to a queen-size bed. Bathrooms have a shower, sink and toilet. There are also a writing desk, TV, radio, telephone, safe, tea/coffee-making facilities, hair dryer, and ample wardrobe and drawer space. Single inside cabins have one extra-wide single bed.</p>
+              <% elsif c.sku == 'outside-cabin' %>
+                  <p>These roomy cabins are the perfect balance between comfort and economy. Air-conditioned outside cabins have two lower beds that can be converted to a queen-size bed. Bathrooms have a shower, sink and toilet. There are also a writing desk, TV, radio, telephone, safe, tea/coffee-making facilities, hair dryer, and ample wardrobe and drawer space. All outside cabins have either a window or a porthole. Single outside cabins have one extra-wide single bed.</p>
+              <% elsif c.sku == 'balcony-cabin' %>
+                  <p>Don’t just look out at the view; step into it, on your own private balcony. Air-conditioned balcony cabins have two lower beds that can be converted to a queen-size bed. Floor-to-ceiling sliding glass doors lead to a balcony with recliner chairs and table. Bathrooms have a shower, sink and toilet. Every cabin has a sofa or chair, table, writing desk, TV, radio, telephone, refrigerator, tea/coffee-making facilities, a hair dryer, and a safe.</p>
+              <% elsif c.sku == 'suite-cabin' %>
+                  <p>Add a little extra luxury to your journey. Air-conditioned suites have two lower beds that can be converted to a queen-size bed. In addition to a shower, sink and toilet, bathrooms have a whirlpool bath and include bathrobes and slippers for use during your cruise. A separate lounge area has a sofa, chairs, table, writing desk, mini-stereo, TV, radio, telephone, refrigerator, and tea/coffee-making facilities. There are also a safe and a hair dryer. Suites feature magazine and newspaper selection, a fruit bowl, mineral water, flowers, daily canapés, and a special Fathom welcome gift on arrival.</p>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+<% end %>
