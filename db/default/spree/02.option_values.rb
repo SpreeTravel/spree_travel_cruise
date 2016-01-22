@@ -7,7 +7,6 @@ option_values = [
   {:name => "outside-cabin", :presentation => "Outside Cabin", :option_type => cabin_type},
   {:name => "balcony-cabin", :presentation => "Balcony Cabin", :option_type => cabin_type},
   {:name => "suite-cabin", :presentation => "Suite Cabin", :option_type => cabin_type},
- 
 ]
 
 ### Creating Option Values

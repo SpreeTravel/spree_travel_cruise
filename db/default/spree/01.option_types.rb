@@ -3,9 +3,8 @@ option_types = [
   {:name => "start_date", :presentation => "Start Date", :attr_type => 'date', :short => 'Start'},
   {:name => "end_date", :presentation => "End Date", :attr_type => 'date', :short => 'End'},
   {:name => "cabin_type", :presentation => "Cabin Type", :attr_type => 'selection', :short => 'Cabin Type'},
+  {:name => "cabin_count", :presentation => "Cabin Count", :attr_type => 'integer', :short => 'Cabin Count'},
   {:name => "adult", :presentation => "Adult", :attr_type => 'integer', :short => 'Adult'},
-  {:name => "simple", :presentation => "Simple", :attr_type => 'float', :short => 'x 1'},
-  {:name => "double", :presentation => "Double", :attr_type => 'float', :short => 'x 2'},
   {:name => "destination", :presentation => "Destination", :attr_type => 'destination', :short => 'Dest'},
 ]
 
