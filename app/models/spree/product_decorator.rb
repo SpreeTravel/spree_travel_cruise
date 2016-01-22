@@ -5,6 +5,10 @@ module Spree
     def cruise?
       self.product_type == Spree::ProductType.find_by_name('cruise')
     end
+    
+    def self.cruises
+      where(product_type_id: Spree::ProductType.find_by_name('cruise').id )
+    end
 
   end
 end
