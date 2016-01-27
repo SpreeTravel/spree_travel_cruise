@@ -7,7 +7,7 @@
               <h4 class="box-title"><%= c.option_values.first.presentation %>
               </h4>
             </div>
-               <% hash = display_the_price(c) %>
+               <% hash = display_travel_price(c) %>
             <% if !hash.empty? %>
               <div class="col-md-4 price"><%= t(:from) %>
                 <span>$<%= hash.first[:price] %></span>
