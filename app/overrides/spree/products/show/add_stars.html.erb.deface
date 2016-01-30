@@ -1,2 +1,0 @@
-<!-- insert_bottom 'h1'-->
-<span class="stars-<%= hotel_stars(@product) %>"></span>
