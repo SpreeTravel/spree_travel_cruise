@@ -33,7 +33,7 @@
         </div>
       </div>
        <% hash = display_travel_price(product) %>
-        
+        <!-- TODO fix this bug, when there is no Rate it return a the price of the variant-->
       <% if !hash.empty? %>
         <div class="price-section">
           <span class="price"><small>PER/NIGHT:</small> <%=hash.first[:price]%></span>
