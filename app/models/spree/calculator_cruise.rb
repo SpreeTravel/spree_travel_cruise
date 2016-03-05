@@ -2,7 +2,7 @@ module Spree
   class CalculatorCruise < BaseCalculator
 
      def calculate_price(context, product, variant, options)
-       return [product.price.to_f] if product.rates.empty?
+       return [price:product.price.to_f] if product.rates.empty?
       list = product.variants.where(id: variant.id).first.rates
       array = []
       list.each do |r|
