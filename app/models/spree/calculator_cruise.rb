@@ -9,8 +9,8 @@ module Spree
            if Date.parse(r.start_date) <=  Date.parse(context.start_date(options).to_s) &&
               Date.parse(r.end_date) >=  Date.parse(context.start_date(options).to_s)
               adult_count = context.adult(options).to_i
-              price = adult_count/2 * r.double + adult_count%2 * r.double
-              array << {price: price, rate: r.id, avg: double}
+              price = adult_count/2 * r.double.to_i + adult_count%2 * r.double.to_i
+              array << {price: price, rate: r.id }
            end
         end
       array
